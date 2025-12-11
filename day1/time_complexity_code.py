@@ -27,13 +27,13 @@
 #     for j in range(1, n + 1):
 #         print('here', i)
 
+arr = range(1, n+1)
+print(arr)
 
 n = 1
 
-# for i in [1, 2]:
-#     print(i)
-arr = range(1, n+1)
-print(arr)
+for i in range(1, n+1):
+    print(i)
 
 # for j in range(1, i+1):
 #     print('Something')
