@@ -6,6 +6,15 @@ from typing import List
 from collections import defaultdict
 
 
+# {
+# {a:1,b:3}: [abbb, babb]
+
+# }
+
+
+# New things here
+# - ord Function that retruns a unicode value for a single string
+
 class Solution:
     def groupAnagrams(strs: List[str]) -> List[List[str]]:
         res = defaultdict(list)
@@ -14,7 +23,6 @@ class Solution:
             count = [0] * 26
             for c in s:
                 count[ord(c) - ord("a")] += 1
-
             res[tuple(count)].append(s)
         return list(res.values())
 
