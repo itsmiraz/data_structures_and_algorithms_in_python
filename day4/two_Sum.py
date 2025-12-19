@@ -18,7 +18,7 @@ class Solution:
         return []
 
     # Second Way using hashmap
-    def twoSum(nums: List[int], target: int) -> List[int]:
+    def twoSum2(nums: List[int], target: int) -> List[int]:
         prevMap = {}  # val: index
 
         for i, n in enumerate(nums):
@@ -31,5 +31,5 @@ class Solution:
         return
 
 
-test = Solution.twoSum(nums=[2, 5, 5, 11], target=10)
+test = Solution.twoSum2(nums=[2, 5, 5, 11], target=10)
 print(test)

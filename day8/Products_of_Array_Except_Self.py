@@ -29,27 +29,40 @@ from typing import List
 
 
 class Solution:
-    def productExceptSelf(nums: List[int]) -> List[int]:
+    def productExceptSelfV2(nums: List[int]) -> List[int]:
+        length = len(nums)
+        res = [0] * length
+
+        for i in range(length):
+            prod = 1
+            for j in range(length):
+                print(i, j)
+                if nums[i] == nums[j] and i == j:
+
+                    continue
+                prod *= nums[j]
+
+            res[i] = prod
+
+        return res
+
+    def productExceptSelf(nums: List[str]) -> List[str]:
 
         res = [1] * len(nums)
 
         prefix = 1
 
         for i in range(len(nums)):
-            print('from first', i)
             res[i] = prefix
             prefix *= nums[i]
 
-        print('after prefix', res)
         postFix = 1
         for i in range(len(nums)-1, -1, -1):
-            print('from last', i)
             res[i] *= postFix
             postFix *= nums[i]
         return res
 
 
-test = Solution.productExceptSelf([1, 2, 3, 4])
+test = Solution.productExceptSelf(["a", "b", "c", "d"])
 
 print(test)
-re
