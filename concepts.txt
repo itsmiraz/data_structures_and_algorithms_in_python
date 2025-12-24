@@ -1,0 +1,5 @@
+
+1. Two pointers
+2. 2 sum
+3. Sliding Window
+4. Brute Force
